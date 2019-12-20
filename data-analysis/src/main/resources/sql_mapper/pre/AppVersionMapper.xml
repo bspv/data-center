@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxcf.analysis.mapper.pre.AppVersionMapper">
+    <resultMap id="BaseResultMap" type="com.hxcf.analysis.model.pre.AppVersion">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="number" jdbcType="VARCHAR" property="number"/>
+        <result column="title" jdbcType="VARCHAR" property="title"/>
+        <result column="context" jdbcType="VARCHAR" property="context"/>
+        <result column="forced" jdbcType="INTEGER" property="forced"/>
+        <result column="download_url" jdbcType="VARCHAR" property="downloadUrl"/>
+        <result column="platform" jdbcType="INTEGER" property="platform"/>
+        <result column="status" jdbcType="INTEGER" property="status"/>
+        <result column="can_write" jdbcType="INTEGER" property="canWrite"/>
+        <result column="preserve" jdbcType="INTEGER" property="preserve"/>
+        <result column="remark" jdbcType="VARCHAR" property="remark"/>
+        <result column="version" jdbcType="INTEGER" property="version"/>
+        <result column="release_time" jdbcType="TIMESTAMP" property="releaseTime"/>
+        <result column="create_user" jdbcType="VARCHAR" property="createUser"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="update_user" jdbcType="VARCHAR" property="updateUser"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, number, title, context, forced, download_url, platform, status, can_write, preserve, 
+    remark, version, release_time, create_user, create_time, update_user, update_time
+  </sql>
+</mapper>

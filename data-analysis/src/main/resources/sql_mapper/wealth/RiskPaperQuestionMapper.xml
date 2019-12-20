@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxcf.analysis.mapper.wealth.RiskPaperQuestionMapper">
+    <resultMap id="BaseResultMap" type="com.hxcf.analysis.model.wealth.RiskPaperQuestion">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="paper_id" jdbcType="INTEGER" property="paperId"/>
+        <result column="question_no" jdbcType="INTEGER" property="questionNo"/>
+        <result column="question_content" jdbcType="VARCHAR" property="questionContent"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="create_user" jdbcType="VARCHAR" property="createUser"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, paper_id, question_no, question_content, create_time, create_user
+  </sql>
+</mapper>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxcf.analysis.mapper.pre.AppForceHistoryMapper">
+    <resultMap id="BaseResultMap" type="com.hxcf.analysis.model.pre.AppForceHistory">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="version_id" jdbcType="INTEGER" property="versionId"/>
+        <result column="old_version_id" jdbcType="INTEGER" property="oldVersionId"/>
+        <result column="old_number" jdbcType="VARCHAR" property="oldNumber"/>
+        <result column="create_user" jdbcType="VARCHAR" property="createUser"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, version_id, old_version_id, old_number, create_user, create_time
+  </sql>
+</mapper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxcf.analysis.mapper.wealth.PushRecordMapper">
+    <resultMap id="BaseResultMap" type="com.hxcf.analysis.model.wealth.PushRecord">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="push_reg_id" jdbcType="VARCHAR" property="pushRegId"/>
+        <result column="push_title" jdbcType="VARCHAR" property="pushTitle"/>
+        <result column="push_content" jdbcType="VARCHAR" property="pushContent"/>
+        <result column="push_target" jdbcType="INTEGER" property="pushTarget"/>
+        <result column="push_day" jdbcType="VARCHAR" property="pushDay"/>
+        <result column="message_id" jdbcType="BIGINT" property="messageId"/>
+        <result column="send_no" jdbcType="INTEGER" property="sendNo"/>
+        <result column="status" jdbcType="BIT" property="status"/>
+        <result column="err_code" jdbcType="VARCHAR" property="errCode"/>
+        <result column="err_msg" jdbcType="VARCHAR" property="errMsg"/>
+        <result column="schedule_id" jdbcType="VARCHAR" property="scheduleId"/>
+        <result column="push_time" jdbcType="TIMESTAMP" property="pushTime"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, user_id, push_reg_id, push_title, push_content, push_target, push_day, message_id, 
+    send_no, status, err_code, err_msg, schedule_id, push_time, create_time
+  </sql>
+</mapper>

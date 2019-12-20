@@ -1,0 +1,72 @@
+spring:
+  datasource:
+    ball:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/ball?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&roundRobinLoadBalance=true&failOverReadOnly=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123456
+      pool-name: analysis-hikari-ball
+      max-lifetime: 1800000
+      maximum-pool-size: 10
+      minimum-idle: 1
+      idle-timeout: 180000
+      auto-commit: true
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+    pre:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/pre?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&roundRobinLoadBalance=true&failOverReadOnly=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123456
+      pool-name: analysis-hikari-pre
+      max-lifetime: 1800000
+      maximum-pool-size: 10
+      minimum-idle: 1
+      idle-timeout: 180000
+      auto-commit: true
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+    wealth:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      jdbc-url: jdbc:mysql://127.0.0.1:3306/wealth?useUnicode=true&characterEncoding=utf-8&autoReconnect=true&roundRobinLoadBalance=true&failOverReadOnly=false&allowMultiQueries=true&serverTimezone=Asia/Shanghai
+      username: root
+      password: 123456
+      pool-name: analysis-hikari-wealth
+      max-lifetime: 1800000
+      maximum-pool-size: 10
+      minimum-idle: 1
+      idle-timeout: 180000
+      auto-commit: true
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+    type: com.zaxxer.hikari.HikariDataSource
+  redis:
+    cluster:
+      nodes:
+        172.20.103.37:7001,
+        172.20.103.37:7002,
+        172.20.103.37:7003,
+        172.20.103.37:7004,
+        172.20.103.37:7005,
+        172.20.103.37:7006
+    password: Hexin@2019
+  pool:
+    size: 8
+    thread-name-prefix: task-scheduler-pool-
+    await-termination-seconds: 60
+    waitForTasksToComplete: true
+
+eureka:
+  username: hxcfService
+  password: service123
+  client:
+    service-url:
+      defaultZone: http://${eureka.username}:${eureka.password}@172.20.103.37:8701/eureka/
+  instance:
+    health-check-url-path: /actuator/health
+    lease-renewal-interval-in-seconds: 10
+    lease-expiration-duration-in-seconds: 15
+    prefer-ip-address: true
+ribbon:
+  ConnectTimeout: 60000
+  ReadTimeout: 60000

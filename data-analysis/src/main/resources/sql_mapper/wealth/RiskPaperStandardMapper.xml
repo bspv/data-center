@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxcf.analysis.mapper.wealth.RiskPaperStandardMapper">
+    <resultMap id="BaseResultMap" type="com.hxcf.analysis.model.wealth.RiskPaperStandard">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="paper_id" jdbcType="INTEGER" property="paperId"/>
+        <result column="standard_no" jdbcType="INTEGER" property="standardNo"/>
+        <result column="score_min" jdbcType="INTEGER" property="scoreMin"/>
+        <result column="score_max" jdbcType="INTEGER" property="scoreMax"/>
+        <result column="risk_tolerance" jdbcType="BIT" property="riskTolerance"/>
+        <result column="risk_product_level" jdbcType="BIT" property="riskProductLevel"/>
+        <result column="risk_preference" jdbcType="VARCHAR" property="riskPreference"/>
+        <result column="create_user" jdbcType="VARCHAR" property="createUser"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, paper_id, standard_no, score_min, score_max, risk_tolerance, risk_product_level, 
+    risk_preference, create_user, create_time
+  </sql>
+</mapper>

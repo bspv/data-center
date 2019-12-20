@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxcf.analysis.mapper.ball.MatchMapper">
+    <resultMap id="BaseResultMap" type="com.hxcf.analysis.model.ball.Match">
+        <id column="id" jdbcType="INTEGER" property="id"/>
+        <result column="league" jdbcType="VARCHAR" property="league"/>
+        <result column="league_type" jdbcType="BIT" property="leagueType"/>
+        <result column="home_team" jdbcType="VARCHAR" property="homeTeam"/>
+        <result column="away_team" jdbcType="VARCHAR" property="awayTeam"/>
+        <result column="match_day" jdbcType="VARCHAR" property="matchDay"/>
+        <result column="match_time" jdbcType="VARCHAR" property="matchTime"/>
+        <result column="match_result" jdbcType="VARCHAR" property="matchResult"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, league, league_type, home_team, away_team, match_day, match_time, match_result, 
+    create_time
+  </sql>
+</mapper>

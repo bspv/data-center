@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hxcf.analysis.mapper.wealth.RiskPaperAnswerMapper">
+    <resultMap id="BaseResultMap" type="com.hxcf.analysis.model.wealth.RiskPaperAnswer">
+        <id column="id" jdbcType="BIGINT" property="id"/>
+        <result column="user_id" jdbcType="BIGINT" property="userId"/>
+        <result column="real_name" jdbcType="VARCHAR" property="realName"/>
+        <result column="user_mobile" jdbcType="VARCHAR" property="userMobile"/>
+        <result column="certificate_type" jdbcType="BIT" property="certificateType"/>
+        <result column="certificate_number" jdbcType="VARCHAR" property="certificateNumber"/>
+        <result column="product_type" jdbcType="BIT" property="productType"/>
+        <result column="paper_id" jdbcType="INTEGER" property="paperId"/>
+        <result column="paper_name" jdbcType="VARCHAR" property="paperName"/>
+        <result column="paper_no" jdbcType="VARCHAR" property="paperNo"/>
+        <result column="paper_ver" jdbcType="INTEGER" property="paperVer"/>
+        <result column="score" jdbcType="INTEGER" property="score"/>
+        <result column="standard_id" jdbcType="INTEGER" property="standardId"/>
+        <result column="risk_tolerance" jdbcType="BIT" property="riskTolerance"/>
+        <result column="risk_product_level" jdbcType="BIT" property="riskProductLevel"/>
+        <result column="risk_preference" jdbcType="VARCHAR" property="riskPreference"/>
+        <result column="status" jdbcType="BIT" property="status"/>
+        <result column="period" jdbcType="INTEGER" property="period"/>
+        <result column="version" jdbcType="INTEGER" property="version"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+        <result column="expire_time" jdbcType="TIMESTAMP" property="expireTime"/>
+        <result column="invalid_time" jdbcType="TIMESTAMP" property="invalidTime"/>
+        <result column="update_time" jdbcType="TIMESTAMP" property="updateTime"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    id, user_id, real_name, user_mobile, certificate_type, certificate_number, product_type, 
+    paper_id, paper_name, paper_no, paper_ver, score, standard_id, risk_tolerance, risk_product_level, 
+    risk_preference, status, period, version, create_time, expire_time, invalid_time, 
+    update_time
+  </sql>
+</mapper>
